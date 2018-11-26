@@ -19,7 +19,7 @@ public class LetterOfCreditState implements ContractState {
     private final LocalDate issueDate;
     private final Double amount;
     private final LocalDate expiryDate;
-    private final String status;
+    private String status;
 
     public LetterOfCreditState(Party importer, Party exporter, Party importersBank, Party exportersBank, String letterOfCreditId, LocalDate issueDate, Double amount, LocalDate expiryDate, String status) {
         this.importer = importer;
@@ -67,6 +67,10 @@ public class LetterOfCreditState implements ContractState {
 
     public String getStatus() {
         return status;
+    }
+
+    public void setStatus(String status) {
+        this.status = status;
     }
 
     @NotNull
